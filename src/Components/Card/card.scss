@@ -1,0 +1,15 @@
+.cardWrapper {
+    width: 100%;
+    padding: 20px 40px;
+    border: 2px solid #aaa;
+    background-color: #f0f0f0;
+    color: #aaa;
+    margin-bottom: 1rem;
+    a{
+        text-decoration: none;
+        color: #aaa;
+        &:hover{
+            color: #666;
+        }
+    }
+}
