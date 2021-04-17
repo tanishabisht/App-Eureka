@@ -1,7 +1,7 @@
 import {StackBtn} from '../../Common'
 import GithubLogo from '../../Images/githubLogo.svg'
 import LinkLogo from '../../Images/linkLogo.svg'
-import ChatLogo from '../../Images/chatLogo.svg'
+// import ChatLogo from '../../Images/chatLogo.svg'
 import './card.scss'
 
 const SearchCard = ({id, projName, projDesc, stacks, projLinks, devfolioLink}) => {

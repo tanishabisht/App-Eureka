@@ -1,14 +1,14 @@
 .skillsBtn {
     font-size: 0.8em;
     font-family: 'Roboto Mono', monospace;
-    border: 1px solid #3F3D56;
+    border: 2px solid #adbac7;
     border-radius: 20px;
-    background-color: #fff;
+    background-color: #444c56;
     padding: 3px 15px;
-    color: #3F3D56;
+    color: #adbac7;
     font-weight: 300;
     &:active{
-        background-color: #ddd;
+        background-color: #dfe8f1;
         color: #1c1c1c;
     }
     margin: 4px 4px;

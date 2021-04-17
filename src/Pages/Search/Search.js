@@ -11,6 +11,7 @@ import RadioGroup from '@material-ui/core/RadioGroup'
 import FormControlLabel from '@material-ui/core/FormControlLabel'
 import FormControl from '@material-ui/core/FormControl'
 import FormLabel from '@material-ui/core/FormLabel'
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 
 // AXIOS
 import axios from 'axios'
@@ -28,9 +29,23 @@ const useStyles = makeStyles({
         border: '1 solid #3F3D56',
         borderRadius: '21',
         marginBottom: '2em',
-        marginTop: '2em'
+        marginTop: '2em',
+        color: '#dfe8f1'
+    },
+    primaryColor: {
+        color: 'adbac7'
     }
 })
+
+
+const theme = createMuiTheme({
+    palette: {
+        primary: { main: '#adbac7' }, 
+        secondary: { main: '#11cb5f' },
+    },
+})
+
+
 
 
 
@@ -141,9 +156,13 @@ const Search = () => {
 
 
     return (
-        <div className='container'>
+        <MuiThemeProvider theme={theme}>
+        <div className='container-fluid' style={{backgroundColor:'rgb(106 110 116)', minHeight:'90vh'}}>
             <div className='row'>
-                <div className='col'>
+                <div className='col-2'></div>
+                <div className='col-8'>
+
+                <h1 style={{marginTop:'80px', marginBottom:'50px', textAlign:'center'}}>SEARCH ...</h1>
 
 
                     <Autocomplete
@@ -153,7 +172,7 @@ const Search = () => {
                         value={searchVal}
                         onChange={(e,newVal) => extractProjNameInpVal(e,newVal)}
                         className={classes.inputTextbox}
-                        renderInput={(params) => <TextField {...params} label="Enter some text here ..." variant="outlined" />} />
+                        renderInput={(params) => <TextField {...params} InputLabelProps={{className: classes.primaryColor,}} label="Enter Project Name here ..." variant="outlined" />} />
 
 
                     
@@ -169,11 +188,11 @@ const Search = () => {
 
 
                     <FormControl component="fieldset" className={classes.inputTextbox}>
-                    <FormLabel component="legend">Filter Themes</FormLabel>
+                    <FormLabel component="legend" style={{color:'#adbac7'}}>Filter Themes</FormLabel>
                     <RadioGroup row aria-label="position" name="position" onChange={(e,newVal) => extractFilterValue(e,newVal)} >
                         {searchList.map(({label}) => <FormControlLabel
                             value={label}
-                            control={<Radio color="primary" />}
+                            control={<Radio color="primary" classes={{root: classes.radio, checked: classes.checked}} />}
                             label={label}
                             labelPlacement="start" />)}
                     </RadioGroup>
@@ -189,9 +208,11 @@ const Search = () => {
                         <div className="loader">Loading ...</div>
                     }
 
+                    <div className='col-2'></div>
                 </div>            
             </div>
         </div>
+        </MuiThemeProvider>
     )
 }
 
