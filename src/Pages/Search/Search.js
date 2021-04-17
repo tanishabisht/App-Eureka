@@ -42,6 +42,8 @@ const Search = () => {
     
     const [allData, setAllData] = useState([])
     const [url, setUrl] = useState('https://hackobackendapis.herokuapp.com/fetchAll')
+    const [nameList, setNameList] = useState([])
+    const [searchList, setSearchList] = useState([])
 
     
     useEffect(() => {
@@ -55,6 +57,23 @@ const Search = () => {
         .catch((err) => {
             console.log(err)
         })
+
+
+        axios.get('https://hackobackendapis.herokuapp.com/fetchAllNames')
+        .then(res => {
+            console.log(res.data)
+            setNameList(res.data)
+        })
+        .catch(err =>  console.log(err))
+
+
+        axios.get('https://hackobackendapis.herokuapp.com/fetchAllLabels')
+        .then(res => {
+            console.log(res.data)
+            setSearchList(res.data)
+        })
+        .catch(err =>  console.log(err))
+
     }, [url])
 
 
@@ -68,15 +87,6 @@ const Search = () => {
 
 
     // SEARCH BAR : BASED ON NAME OF PROJECT
-
-    const nameList = [
-        'ALL',
-        'DONTRACK',
-        'AnonyMate',
-        'Peer IO',
-        'MediFast',
-        'Ularn'
-    ]
 
     const onSubmitProjNameChangeURL = (inpVal) => {
         if(inpVal==='ALL') setUrl(`https://hackobackendapis.herokuapp.com/fetchAll`)
@@ -129,20 +139,6 @@ const Search = () => {
 
     // RADIO BUTTONS : BASED ON ML FILTER
 
-    const searchList = [
-        {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
-        {label: 'mental health', fetchUrl: 'fetchSafety'},
-        {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
-        {label: 'health and wellness', fetchUrl: 'fetchSafety'},
-        {label: 'general wellfare', fetchUrl: 'fetchSafety'},
-        {label: 'technology', fetchUrl: 'fetchTech'},
-        {label: 'education', fetchUrl: 'fetchSafety'},
-        {label: 'science and research', fetchUrl: 'fetchScience'},
-        {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
-    ]
-
-    const [filterVal, setFilterVal] = useState(searchList[0].label)
-
     const extractFilterValue = (e,newVal) => {
         console.log(e, newVal)
         var newURL
@@ -183,28 +179,13 @@ const Search = () => {
 
 
                     <FormControl component="fieldset" className={classes.inputTextbox}>
-                    <FormLabel component="legend">Filter Options</FormLabel>
+                    <FormLabel component="legend">Filter Themes</FormLabel>
                     <RadioGroup row aria-label="position" name="position" onChange={(e,newVal) => extractFilterValue(e,newVal)} >
-                        <FormControlLabel
-                            value="technology"
+                        {searchList.map(({label}) => <FormControlLabel
+                            value={label}
                             control={<Radio color="primary" />}
-                            label="technology"
-                            labelPlacement="start" />
-                        <FormControlLabel
-                            value="science and research"
-                            control={<Radio color="primary" />}
-                            label="science and research"
-                            labelPlacement="start" />
-                        <FormControlLabel
-                            value="miscellaneous"
-                            control={<Radio color="primary" />}
-                            label="miscellaneous"
-                            labelPlacement="start" />
-                        <FormControlLabel 
-                            value="education" 
-                            control={<Radio color="primary" />} 
-                            label="education" 
-                            labelPlacement="start" />
+                            label={label}
+                            labelPlacement="start" />)}
                     </RadioGroup>
                     </FormControl>
 
@@ -226,6 +207,54 @@ const Search = () => {
 
 export default Search
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // const searchList = [
+    //     {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
+    //     {label: 'mental health', fetchUrl: 'fetchSafety'},
+    //     {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
+    //     {label: 'health and wellness', fetchUrl: 'fetchSafety'},
+    //     {label: 'general wellfare', fetchUrl: 'fetchSafety'},
+    //     {label: 'technology', fetchUrl: 'fetchTech'},
+    //     {label: 'education', fetchUrl: 'fetchSafety'},
+    //     {label: 'science and research', fetchUrl: 'fetchScience'},
+    //     {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
+    // ]
+
+
+
+
+//     <FormControlLabel
+//     value="technology"
+//     control={<Radio color="primary" />}
+//     label="technology"
+//     labelPlacement="start" />
+// <FormControlLabel
+//     value="science and research"
+//     control={<Radio color="primary" />}
+//     label="science and research"
+//     labelPlacement="start" />
+// <FormControlLabel
+//     value="miscellaneous"
+//     control={<Radio color="primary" />}
+//     label="miscellaneous"
+//     labelPlacement="start" />
+// <FormControlLabel 
+//     value="education" 
+//     control={<Radio color="primary" />} 
+//     label="education" 
+//     labelPlacement="start" />
 
 
 
