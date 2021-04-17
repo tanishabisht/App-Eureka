@@ -6,7 +6,7 @@ import svgImg4 from "../../Images/404.svg"
 
 const Home = () => {
     return (
-        <div>
+        <div className='container-fluid container_main'>
 
             <div className="container_main container">
                 <div className="row new">
