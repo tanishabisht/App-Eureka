@@ -78,19 +78,15 @@ const Search = () => {
         'Ularn'
     ]
 
-    const onSubmitChangeURL = (inpVal) => {
-        var searchThis
-        nameList.forEach(projName => {
-            if(projName===inpVal) searchThis = projName
-        })
-        if(searchThis==='ALL') setUrl(`https://hackobackendapis.herokuapp.com/fetchAll`)
-        else setUrl(`https://hackobackendapis.herokuapp.com/fetchbyName/${searchThis}`)
+    const onSubmitProjNameChangeURL = (inpVal) => {
+        if(inpVal==='ALL') setUrl(`https://hackobackendapis.herokuapp.com/fetchAll`)
+        else setUrl(`https://hackobackendapis.herokuapp.com/fetchbyName/${inpVal}`)
     }
 
     const [searchVal, setSearchVal] = useState(nameList[0])
-    const extractInpVal = (e, newVal) => {
+    const extractProjNameInpVal = (e, newVal) => {
         setSearchVal(newVal)
-        onSubmitChangeURL(newVal)
+        onSubmitProjNameChangeURL(newVal)
     }
 
 
@@ -101,6 +97,37 @@ const Search = () => {
 
 
 
+    // STACK SEARCH BAR : BASED ON STACKS
+
+    const stackList = [
+        "Solidity",
+        "Infura",
+        "Nodejs",
+        "discord.js",
+        "Superfluid"
+    ]
+
+    const onSubmitStackChangeURL = (inpVal) => {
+        console.log(inpVal)
+        // setUrl(`https://hackobackendapis.herokuapp.com/fetchStack/${inpVal}`)
+    }
+
+    const [stackVal, setStackVal] = useState(stackList[0])
+    const extractStackInpVal = (e, newVal) => {
+        setStackVal(newVal)
+        onSubmitStackChangeURL(newVal)
+    }
+
+
+
+
+
+
+
+
+
+
+    // RADIO BUTTONS : BASED ON ML FILTER
 
     const searchList = [
         {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
@@ -134,13 +161,24 @@ const Search = () => {
 
 
                     <Autocomplete
-                        id="controllable-states-demo"
+                        id="seacch proj names"
                         options={nameList}
                         getOptionLabel={(option) => option}
                         value={searchVal}
-                        onChange={(e,newVal) => extractInpVal(e,newVal)}
+                        onChange={(e,newVal) => extractProjNameInpVal(e,newVal)}
                         className={classes.inputTextbox}
                         renderInput={(params) => <TextField {...params} label="Enter some text here ..." variant="outlined" />} />
+
+
+                    
+                    <Autocomplete
+                        id="search stacks"
+                        options={stackList}
+                        getOptionLabel={(option) => option}
+                        value={stackVal}
+                        onChange={(e,newVal) => extractStackInpVal(e,newVal)}
+                        className={classes.inputTextbox}
+                        renderInput={(params) => <TextField {...params} label="Enter some stack here ..." variant="outlined" />} />
 
 
 
@@ -191,6 +229,9 @@ export default Search
 
 
 
+        // nameList.forEach(projName => {
+        //     if(projName===inpVal) searchThis = projName
+        // })
 
 
 // <Autocomplete

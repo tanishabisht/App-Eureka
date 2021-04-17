@@ -7,7 +7,8 @@ Link of the project: https://tanishabisht.github.io/CaffeineOverflow-FrontEnd
 
 The JSON object that will be extracted from the database:
 
-1. For listing projects
+1. For listing all projects 
+   - **GET : /fetchAll**
 ```
 const dbVals = [
     {
@@ -25,6 +26,12 @@ const dbVals = [
 
 
 2. For searching projects based on Names
+   - **GET : /fetchbyName/{projName}**
+
+
+
+3. For listing all the project Names
+   - **GET : /fetchAllProjName**
 ```
 [
     'ALL',
@@ -38,7 +45,27 @@ const dbVals = [
 
 
 
-3. For Searching projects based on the filters created by ML model
+4. Fetch By ML generated tags
+   - **GET : /fetchHealth**
+   - **GET : /fetchEducation**
+   - **GET : /fetchMentalhealth**
+   - **GET : /fetchSafety**
+   - **GET : /fetchMisc**
+   - **GET : /fetchTech**
+   - **GET : /fetchScience**
+   - **GET : /fetchGeneral**
+
+
+
+5. Fetch Projects that are given special mentions
+   - **GET : /fetchSpecialMention**
+
+
+
+
+
+6. For Searching projects based on the filters created by ML model
+   - **GET : /fetchLabelAndURL**
 ```
 [
     {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
@@ -55,7 +82,26 @@ const dbVals = [
 
 
 
-4. For Comment Section
+7. For listing all the Stacks
+   - **GET : /FecthAllStacks**
+```
+[
+    "Solidity",
+    "Infura",
+    "Nodejs",
+    "discord.js",
+    "Superfluid"
+]
+```
+
+
+
+8. Fetch Projects By Stacks
+   - **GET : /FecthByStacks/{stackName}**
+
+
+
+9. For Comment Section
 ```
 const chatVals = [
     {
