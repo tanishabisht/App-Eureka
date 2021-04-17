@@ -44,6 +44,7 @@ const Search = () => {
     const [url, setUrl] = useState('https://hackobackendapis.herokuapp.com/fetchAll')
     const [nameList, setNameList] = useState([])
     const [searchList, setSearchList] = useState([])
+    const [stackList, setStackList] = useState([])
 
     
     useEffect(() => {
@@ -54,24 +55,21 @@ const Search = () => {
             else setAllData(res.data.slice(0,20))
             console.log(res)
         })
-        .catch((err) => {
-            console.log(err)
-        })
+        .catch((err) => console.log(err))
 
 
         axios.get('https://hackobackendapis.herokuapp.com/fetchAllNames')
-        .then(res => {
-            console.log(res.data)
-            setNameList(res.data)
-        })
+        .then(res => setNameList(res.data))
         .catch(err =>  console.log(err))
 
 
         axios.get('https://hackobackendapis.herokuapp.com/fetchAllLabels')
-        .then(res => {
-            console.log(res.data)
-            setSearchList(res.data)
-        })
+        .then(res =>  setSearchList(res.data))
+        .catch(err =>  console.log(err))
+
+
+        axios.get('https://hackobackendapis.herokuapp.com/fetchStacks')
+        .then(res => setStackList(res.data))
         .catch(err =>  console.log(err))
 
     }, [url])
@@ -109,17 +107,9 @@ const Search = () => {
 
     // STACK SEARCH BAR : BASED ON STACKS
 
-    const stackList = [
-        "Solidity",
-        "Infura",
-        "Nodejs",
-        "discord.js",
-        "Superfluid"
-    ]
-
     const onSubmitStackChangeURL = (inpVal) => {
         console.log(inpVal)
-        // setUrl(`https://hackobackendapis.herokuapp.com/fetchStack/${inpVal}`)
+        setUrl(`https://hackobackendapis.herokuapp.com/fetchStacksByName/${inpVal}`)
     }
 
     const [stackVal, setStackVal] = useState(stackList[0])
