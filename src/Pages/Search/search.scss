@@ -1,0 +1,14 @@
+.inputTextbox[name=browsers] {
+    display: block;
+    padding: 10px;
+    width: 600px;
+    border: 1px solid #3F3D56;
+    border-radius: 21px;
+    &:focus{
+        outline: none;
+    }
+}
+
+.search_datalist {
+    display: none;
+}
