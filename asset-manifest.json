@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/CaffeineOverflow-FrontEnd/static/css/main.672a0fd8.chunk.css",
-    "main.js": "/CaffeineOverflow-FrontEnd/static/js/main.16892167.chunk.js",
-    "main.js.map": "/CaffeineOverflow-FrontEnd/static/js/main.16892167.chunk.js.map",
+    "main.css": "/CaffeineOverflow-FrontEnd/static/css/main.91fc44cf.chunk.css",
+    "main.js": "/CaffeineOverflow-FrontEnd/static/js/main.1eff030a.chunk.js",
+    "main.js.map": "/CaffeineOverflow-FrontEnd/static/js/main.1eff030a.chunk.js.map",
     "runtime-main.js": "/CaffeineOverflow-FrontEnd/static/js/runtime-main.910c1bfe.js",
     "runtime-main.js.map": "/CaffeineOverflow-FrontEnd/static/js/runtime-main.910c1bfe.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/CaffeineOverflow-FrontEnd/static/css/2.4c97ca4f.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.08ed766a.chunk.js.map": "/CaffeineOverflow-FrontEnd/static/js/2.08ed766a.chunk.js.map",
     "index.html": "/CaffeineOverflow-FrontEnd/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/CaffeineOverflow-FrontEnd/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.672a0fd8.chunk.css.map": "/CaffeineOverflow-FrontEnd/static/css/main.672a0fd8.chunk.css.map",
+    "static/css/main.91fc44cf.chunk.css.map": "/CaffeineOverflow-FrontEnd/static/css/main.91fc44cf.chunk.css.map",
     "static/js/2.08ed766a.chunk.js.LICENSE.txt": "/CaffeineOverflow-FrontEnd/static/js/2.08ed766a.chunk.js.LICENSE.txt",
     "static/media/404.43ed5c3f.svg": "/CaffeineOverflow-FrontEnd/static/media/404.43ed5c3f.svg",
     "static/media/collaboration.53874bdf.svg": "/CaffeineOverflow-FrontEnd/static/media/collaboration.53874bdf.svg",
@@ -23,7 +23,7 @@
     "static/js/runtime-main.910c1bfe.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.08ed766a.chunk.js",
-    "static/css/main.672a0fd8.chunk.css",
-    "static/js/main.16892167.chunk.js"
+    "static/css/main.91fc44cf.chunk.css",
+    "static/js/main.1eff030a.chunk.js"
   ]
 }
