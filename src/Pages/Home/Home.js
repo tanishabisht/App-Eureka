@@ -62,7 +62,7 @@ const Home = () => {
 
                 <div className="row new">
                     <div className="col New">
-                    <h3>ESSENCE OF HAKATHON</h3>
+                        <h3>ESSENCE OF HAKATHON</h3>
                         <p>Hackathons are about learning they're about education they're about community and meeting new people hanging out and seeing what others are up to and just creatively being a part of the community they're about fun</p>
                     </div>
                     <div className="col New">

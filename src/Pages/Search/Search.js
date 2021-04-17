@@ -29,20 +29,8 @@ const useStyles = makeStyles({
         border: '1 solid #3F3D56',
         borderRadius: '21',
         marginBottom: '2em',
-        marginTop: '2em',
-        color: '#dfe8f1'
-    },
-    primaryColor: {
-        color: 'adbac7'
+        marginTop: '2em'
     }
-})
-
-
-const theme = createMuiTheme({
-    palette: {
-        primary: { main: '#adbac7' }, 
-        secondary: { main: '#11cb5f' },
-    },
 })
 
 
@@ -156,8 +144,7 @@ const Search = () => {
 
 
     return (
-        <MuiThemeProvider theme={theme}>
-        <div className='container-fluid' style={{backgroundColor:'rgb(106 110 116)', minHeight:'90vh'}}>
+        <div className='container-fluid' style={{minHeight:'90vh'}}>
             <div className='row'>
                 <div className='col-2'></div>
                 <div className='col-8'>
@@ -172,7 +159,7 @@ const Search = () => {
                         value={searchVal}
                         onChange={(e,newVal) => extractProjNameInpVal(e,newVal)}
                         className={classes.inputTextbox}
-                        renderInput={(params) => <TextField {...params} InputLabelProps={{className: classes.primaryColor,}} label="Enter Project Name here ..." variant="outlined" />} />
+                        renderInput={(params) => <TextField {...params} label="Enter Project Name here ..." variant="outlined" />} />
 
 
                     
@@ -212,94 +199,7 @@ const Search = () => {
                 </div>            
             </div>
         </div>
-        </MuiThemeProvider>
     )
 }
 
 export default Search
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // const searchList = [
-    //     {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
-    //     {label: 'mental health', fetchUrl: 'fetchSafety'},
-    //     {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
-    //     {label: 'health and wellness', fetchUrl: 'fetchSafety'},
-    //     {label: 'general wellfare', fetchUrl: 'fetchSafety'},
-    //     {label: 'technology', fetchUrl: 'fetchTech'},
-    //     {label: 'education', fetchUrl: 'fetchSafety'},
-    //     {label: 'science and research', fetchUrl: 'fetchScience'},
-    //     {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
-    // ]
-
-
-
-
-//     <FormControlLabel
-//     value="technology"
-//     control={<Radio color="primary" />}
-//     label="technology"
-//     labelPlacement="start" />
-// <FormControlLabel
-//     value="science and research"
-//     control={<Radio color="primary" />}
-//     label="science and research"
-//     labelPlacement="start" />
-// <FormControlLabel
-//     value="miscellaneous"
-//     control={<Radio color="primary" />}
-//     label="miscellaneous"
-//     labelPlacement="start" />
-// <FormControlLabel 
-//     value="education" 
-//     control={<Radio color="primary" />} 
-//     label="education" 
-//     labelPlacement="start" />
-
-
-
-        // nameList.forEach(projName => {
-        //     if(projName===inpVal) searchThis = projName
-        // })
-
-
-// <Autocomplete
-// multiple filterSelectedOptions id="tags-outlined"
-// options={searchList}
-// getOptionLabel={(option) => option.label}
-// defaultValue={[searchList[0]]}
-// onChange={(e,newVal) => extractFilterValue(e,newVal)}                        
-// className={classes.inputTextbox}
-// renderInput={(params) => (
-//     <TextField
-//         {...params}
-//         variant="outlined"
-//         label="Filter Options"
-//         placeholder="Select a filter"
-//     />
-// )}
-// />
-
-
-
-
-
-
-// const dbVals = [
-//     {id: 0, projName:'PROJ NAME 1', projDesc:'lorem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm', stacks:['NODE JS', 'MongoDB', 'ReactJS'], projLinks:['#', '#', '#'], inDesc:'em t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cg'},
-//     {id: 1, projName:'PROJ NAME 2', projDesc:'lorem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm', stacks:['NODE JS', 'MongoDB', 'ReactJS'], projLinks:['#', '#', '#'], inDesc:'em t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cg'},
-//     {id: 2, projName:'PROJ NAME 3', projDesc:'lorem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm', stacks:['NODE JS', 'MongoDB', 'ReactJS'], projLinks:['#', '#', '#'], inDesc:'em t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cg'},
-//     {id: 3, projName:'PROJ NAME 4', projDesc:'lorem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm', stacks:['NODE JS', 'MongoDB', 'ReactJS'], projLinks:['#', '#', '#'], inDesc:'em t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cg'},
-//     {id: 4, projName:'PROJ NAME 5', projDesc:'lorem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm', stacks:['NODE JS', 'MongoDB', 'ReactJS'], projLinks:['https://github.com/shivamanand1/Gr', '#', '#'], inDesc:'em t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgem t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cgm t desctisdjlfimgknud,khfgn sdkfjcfhnmsh gkdshgckmd,fgn dkjhgkd gdfkg dkhgkdfh kcd gkhd,cg'}
-// ]
