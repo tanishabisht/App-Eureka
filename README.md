@@ -1,6 +1,6 @@
 # Hackofiesta
 
-Link of the project: https://tanishabisht.github.io/Hackofiesta-Frontend
+Link of the project: https://tanishabisht.github.io/CaffeineOverflow-FrontEnd
 
 
 ## Database
@@ -22,7 +22,40 @@ const dbVals = [
 ]
 ```
 
-2. For Comment Section
+
+
+2. For searching projects based on Names
+```
+[
+    'ALL',
+    'DONTRACK',
+    'AnonyMate',
+    'Peer IO',
+    'MediFast',
+    'Ularn'
+]
+```
+
+
+
+3. For Searching projects based on the filters created by ML model
+```
+[
+    {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
+    {label: 'mental health', fetchUrl: 'fetchSafety'},
+    {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
+    {label: 'health and wellness', fetchUrl: 'fetchSafety'},
+    {label: 'general wellfare', fetchUrl: 'fetchSafety'},
+    {label: 'technology', fetchUrl: 'fetchTech'},
+    {label: 'education', fetchUrl: 'fetchSafety'},
+    {label: 'science and research', fetchUrl: 'fetchScience'},
+    {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
+]
+```
+
+
+
+4. For Comment Section
 ```
 const chatVals = [
     {

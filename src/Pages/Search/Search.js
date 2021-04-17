@@ -6,6 +6,11 @@ import './search.scss'
 import TextField from '@material-ui/core/TextField'
 import Autocomplete from '@material-ui/lab/Autocomplete'
 import { makeStyles } from '@material-ui/core/styles'
+import Radio from '@material-ui/core/Radio'
+import RadioGroup from '@material-ui/core/RadioGroup'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import FormControl from '@material-ui/core/FormControl'
+import FormLabel from '@material-ui/core/FormLabel'
 
 // AXIOS
 import axios from 'axios'
@@ -45,27 +50,24 @@ const Search = () => {
         .then((res)=> {
             if(url.includes('fetchbyName')) setAllData([res.data])
             else setAllData(res.data.slice(0,20))
-            console.log(res);
+            console.log(res)
         })
         .catch((err) => {
-            console.log(err);
+            console.log(err)
         })
     }, [url])
 
 
 
 
-    const searchList = [
-        {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
-        {label: 'mental health', fetchUrl: 'fetchSafety'},
-        {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
-        {label: 'health and wellness', fetchUrl: 'fetchSafety'},
-        {label: 'general wellfare', fetchUrl: 'fetchSafety'},
-        {label: 'technology', fetchUrl: 'fetchTech'},
-        {label: 'education', fetchUrl: 'fetchSafety'},
-        {label: 'science and research', fetchUrl: 'fetchScience'},
-        {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
-    ]
+
+
+
+
+
+
+
+    // SEARCH BAR : BASED ON NAME OF PROJECT
 
     const nameList = [
         'ALL',
@@ -75,9 +77,6 @@ const Search = () => {
         'MediFast',
         'Ularn'
     ]
-
-
-
 
     const onSubmitChangeURL = (inpVal) => {
         var searchThis
@@ -97,6 +96,37 @@ const Search = () => {
 
 
 
+
+
+
+
+
+
+    const searchList = [
+        {label: 'safety and wellbeing', fetchUrl: 'fetchSafety'},
+        {label: 'mental health', fetchUrl: 'fetchSafety'},
+        {label: 'miscellaneous', fetchUrl: 'fetchMisc'},
+        {label: 'health and wellness', fetchUrl: 'fetchSafety'},
+        {label: 'general wellfare', fetchUrl: 'fetchSafety'},
+        {label: 'technology', fetchUrl: 'fetchTech'},
+        {label: 'education', fetchUrl: 'fetchSafety'},
+        {label: 'science and research', fetchUrl: 'fetchScience'},
+        {label: 'special mention', fetchUrl: 'fetchSpecialMention'}
+    ]
+
+    const [filterVal, setFilterVal] = useState(searchList[0].label)
+
+    const extractFilterValue = (e,newVal) => {
+        console.log(e, newVal)
+        var newURL
+        searchList.forEach(({label, fetchUrl}) => {
+            if(label===newVal) newURL = fetchUrl
+        })
+        setUrl(`https://hackobackendapis.herokuapp.com/${newURL}`)
+    }
+
+
+
     return (
         <div className='container'>
             <div className='row'>
@@ -104,14 +134,42 @@ const Search = () => {
 
 
                     <Autocomplete
-                        value={searchVal}
-                        onChange={(e,newVal) => extractInpVal(e,newVal)}
                         id="controllable-states-demo"
                         options={nameList}
                         getOptionLabel={(option) => option}
+                        value={searchVal}
+                        onChange={(e,newVal) => extractInpVal(e,newVal)}
                         className={classes.inputTextbox}
-                        renderInput={(params) => <TextField {...params} label="Enter some text here ..." variant="outlined" />}
-                    />
+                        renderInput={(params) => <TextField {...params} label="Enter some text here ..." variant="outlined" />} />
+
+
+
+                    <FormControl component="fieldset" className={classes.inputTextbox}>
+                    <FormLabel component="legend">Filter Options</FormLabel>
+                    <RadioGroup row aria-label="position" name="position" onChange={(e,newVal) => extractFilterValue(e,newVal)} >
+                        <FormControlLabel
+                            value="technology"
+                            control={<Radio color="primary" />}
+                            label="technology"
+                            labelPlacement="start" />
+                        <FormControlLabel
+                            value="science and research"
+                            control={<Radio color="primary" />}
+                            label="science and research"
+                            labelPlacement="start" />
+                        <FormControlLabel
+                            value="miscellaneous"
+                            control={<Radio color="primary" />}
+                            label="miscellaneous"
+                            labelPlacement="start" />
+                        <FormControlLabel 
+                            value="education" 
+                            control={<Radio color="primary" />} 
+                            label="education" 
+                            labelPlacement="start" />
+                    </RadioGroup>
+                    </FormControl>
+
                     
                     <datalist id="browsers" className='search_datalist'>
                         {searchList.map(({label}) => <option className='search_datalist' value={label} />)}
@@ -133,6 +191,24 @@ export default Search
 
 
 
+
+
+// <Autocomplete
+// multiple filterSelectedOptions id="tags-outlined"
+// options={searchList}
+// getOptionLabel={(option) => option.label}
+// defaultValue={[searchList[0]]}
+// onChange={(e,newVal) => extractFilterValue(e,newVal)}                        
+// className={classes.inputTextbox}
+// renderInput={(params) => (
+//     <TextField
+//         {...params}
+//         variant="outlined"
+//         label="Filter Options"
+//         placeholder="Select a filter"
+//     />
+// )}
+// />
 
 
 
