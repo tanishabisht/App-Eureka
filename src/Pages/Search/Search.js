@@ -41,7 +41,7 @@ const Search = () => {
     const classes = useStyles()
     
     const [allData, setAllData] = useState([])
-    const [url, setUrl] = useState('https://hackobackendapis.herokuapp.com/fetchAll')
+    const [url, setUrl] = useState('https://hacko-backend-apis.herokuapp.com/fetchAll')
     const [nameList, setNameList] = useState([])
     const [searchList, setSearchList] = useState([])
     const [stackList, setStackList] = useState([])
@@ -58,17 +58,17 @@ const Search = () => {
         .catch((err) => console.log(err))
 
 
-        axios.get('https://hackobackendapis.herokuapp.com/fetchAllNames')
+        axios.get('https://hacko-backend-apis.herokuapp.com/fetchAllNames')
         .then(res => setNameList(res.data))
         .catch(err =>  console.log(err))
 
 
-        axios.get('https://hackobackendapis.herokuapp.com/fetchAllLabels')
+        axios.get('https://hacko-backend-apis.herokuapp.com/fetchAllLabels')
         .then(res =>  setSearchList(res.data))
         .catch(err =>  console.log(err))
 
 
-        axios.get('https://hackobackendapis.herokuapp.com/fetchStacks')
+        axios.get('https://hacko-backend-apis.herokuapp.com/fetchStacks')
         .then(res => setStackList(res.data))
         .catch(err =>  console.log(err))
 
@@ -87,8 +87,8 @@ const Search = () => {
     // SEARCH BAR : BASED ON NAME OF PROJECT
 
     const onSubmitProjNameChangeURL = (inpVal) => {
-        if(inpVal==='ALL') setUrl(`https://hackobackendapis.herokuapp.com/fetchAll`)
-        else setUrl(`https://hackobackendapis.herokuapp.com/fetchbyName/${inpVal}`)
+        if(inpVal==='ALL') setUrl(`https://hacko-backend-apis.herokuapp.com/fetchAll`)
+        else setUrl(`https://hacko-backend-apis.herokuapp.com/fetchbyName/${inpVal}`)
     }
 
     const [searchVal, setSearchVal] = useState(nameList[0])
@@ -109,7 +109,7 @@ const Search = () => {
 
     const onSubmitStackChangeURL = (inpVal) => {
         console.log(inpVal)
-        setUrl(`https://hackobackendapis.herokuapp.com/fetchStacksByName/${inpVal}`)
+        setUrl(`https://hacko-backend-apis.herokuapp.com/fetchStacksByName/${inpVal}`)
     }
 
     const [stackVal, setStackVal] = useState(stackList[0])
@@ -135,7 +135,7 @@ const Search = () => {
         searchList.forEach(({label, fetchUrl}) => {
             if(label===newVal) newURL = fetchUrl
         })
-        setUrl(`https://hackobackendapis.herokuapp.com/${newURL}`)
+        setUrl(`https://hacko-backend-apis.herokuapp.com/${newURL}`)
     }
 
 
