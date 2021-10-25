@@ -1,9 +1,8 @@
 # Hackofiesta
-Link of the project: https://tanishabisht.github.io/CaffeineOverflow-FrontEnd
-
-## Database
-Link for the hosted backend: https://hacko-backend-apis.herokuapp.com/
-Link for the backend repo: https://github.com/Addii45/CaffieneOverflow
+- [Project video](https://www.youtube.com/watch?v=llKI-qmbowA&t=6s)
+- [Hosted frontend link](https://tanishabisht.github.io/CaffeineOverflow-FrontEnd)
+- [Hosted backend link](https://hacko-backend-apis.herokuapp.com/)
+- [Backend repo](https://github.com/Addii45/CaffieneOverflow)
 
 ## How to Install
 You must have the following tools installed in your PC
