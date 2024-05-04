@@ -1,23 +1,35 @@
-# Hackofiesta
-- [Project video](https://www.youtube.com/watch?v=llKI-qmbowA&t=6s)
-- [Hosted frontend link](https://tanishabisht.github.io/CaffeineOverflow-FrontEnd)
-- [Hosted backend link](https://hacko-backend-apis.herokuapp.com/)
-- [Backend repo](https://github.com/Addii45/CaffieneOverflow)
+# App - Eureka
 
-## How to Install
-You must have the following tools installed in your PC
-1. Node Packange Manager
-2. COde Editor (preferred VSC)
+Struggling to find ideas for your next app? Eureka is here to help! This application aggregates and filters a variety of project ideas by scraping data from hackerearth, tailored to your specific needs.
 
-Guidelines to run the project
-1. Pull the repo in your local
-2. In your command line, write the code `npm install` to install all the dependancies
-3. To run in your local machine, write the code `npm start`
+[**Watch the Project Overview**](https://www.youtube.com/watch?v=llKI-qmbowA&t=6s)
 
-Run the backend in Linux/macOS, as we need turicreate that run in Linux/macOS only
 
-## What is inside?
-![alt text](./Images/stack.JPG)
-<br/>
+<video src="/demo.mp4" width="320" height="240" controls></video>
 
-![alt text](./Images/ml.JPG)
+This project was developed during the Hackofiesta hackathon. You can find the backend repository [here](https://github.com/tanishabisht/App-EurekaBackend).
+
+
+## Instructions to run the application
+Follow these instructions to get the application running:
+1. Install Node.js version 14.21.3:
+   - `nvm install v14.21.3`
+   - `nvm use v14.21.3`
+2. Install necessary packages:
+   - `npm install`
+3. Start the application:
+   - To run the project : `npm start`
+
+
+## Screenshots
+Explore some of the features through these screenshots:
+![Technology Stack](./Images/stack.JPG)
+![Machine Learning Projects](./Images/ml.JPG)
+
+
+## Team
+`Tanisha` [`Adithya Balachandra`](https://github.com/Addii45) [`Arjun Gopikrishnan`](https://github.com/arjun-gopikrishnan) [`Aditi Rastogi`](https://github.com/AditiRastogi250701) [`Prakhar Singh`](https://github.com/PrSi007)
+
+
+## Technologies used
+`reactjs` `scss` `bootstrap` `react-scroll` `styled-components` `axios`
