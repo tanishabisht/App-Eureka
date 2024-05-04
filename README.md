@@ -4,8 +4,7 @@ Struggling to find ideas for your next app? Eureka is here to help! This applica
 
 [**Watch the Project Overview**](https://www.youtube.com/watch?v=llKI-qmbowA&t=6s)
 
-
-<video src="/demo.mp4" width="320" height="240" controls></video>
+![demo](/demo.gif)
 
 This project was developed during the Hackofiesta hackathon. You can find the backend repository [here](https://github.com/tanishabisht/App-EurekaBackend).
 
