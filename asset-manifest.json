@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/CaffeineOverflow-FrontEnd/static/css/main.0093cd27.chunk.css",
-    "main.js": "/CaffeineOverflow-FrontEnd/static/js/main.190ded72.chunk.js",
-    "main.js.map": "/CaffeineOverflow-FrontEnd/static/js/main.190ded72.chunk.js.map",
-    "runtime-main.js": "/CaffeineOverflow-FrontEnd/static/js/runtime-main.910c1bfe.js",
-    "runtime-main.js.map": "/CaffeineOverflow-FrontEnd/static/js/runtime-main.910c1bfe.js.map",
-    "static/css/2.4c97ca4f.chunk.css": "/CaffeineOverflow-FrontEnd/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.1f03089f.chunk.js": "/CaffeineOverflow-FrontEnd/static/js/2.1f03089f.chunk.js",
-    "static/js/2.1f03089f.chunk.js.map": "/CaffeineOverflow-FrontEnd/static/js/2.1f03089f.chunk.js.map",
-    "index.html": "/CaffeineOverflow-FrontEnd/index.html",
-    "static/css/2.4c97ca4f.chunk.css.map": "/CaffeineOverflow-FrontEnd/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.0093cd27.chunk.css.map": "/CaffeineOverflow-FrontEnd/static/css/main.0093cd27.chunk.css.map",
-    "static/js/2.1f03089f.chunk.js.LICENSE.txt": "/CaffeineOverflow-FrontEnd/static/js/2.1f03089f.chunk.js.LICENSE.txt",
-    "static/media/404.43ed5c3f.svg": "/CaffeineOverflow-FrontEnd/static/media/404.43ed5c3f.svg",
-    "static/media/collaboration.53874bdf.svg": "/CaffeineOverflow-FrontEnd/static/media/collaboration.53874bdf.svg",
-    "static/media/githubLogo.3f532c5e.svg": "/CaffeineOverflow-FrontEnd/static/media/githubLogo.3f532c5e.svg",
-    "static/media/linkLogo.09936f89.svg": "/CaffeineOverflow-FrontEnd/static/media/linkLogo.09936f89.svg",
-    "static/media/thinking.1d6d7de1.svg": "/CaffeineOverflow-FrontEnd/static/media/thinking.1d6d7de1.svg",
-    "static/media/time.3a1a8916.svg": "/CaffeineOverflow-FrontEnd/static/media/time.3a1a8916.svg"
+    "main.css": "/App-Eureka/static/css/main.8ccfe011.chunk.css",
+    "main.js": "/App-Eureka/static/js/main.058d5a9e.chunk.js",
+    "main.js.map": "/App-Eureka/static/js/main.058d5a9e.chunk.js.map",
+    "runtime-main.js": "/App-Eureka/static/js/runtime-main.6ae41161.js",
+    "runtime-main.js.map": "/App-Eureka/static/js/runtime-main.6ae41161.js.map",
+    "static/css/2.4c97ca4f.chunk.css": "/App-Eureka/static/css/2.4c97ca4f.chunk.css",
+    "static/js/2.85f254ca.chunk.js": "/App-Eureka/static/js/2.85f254ca.chunk.js",
+    "static/js/2.85f254ca.chunk.js.map": "/App-Eureka/static/js/2.85f254ca.chunk.js.map",
+    "index.html": "/App-Eureka/index.html",
+    "static/css/2.4c97ca4f.chunk.css.map": "/App-Eureka/static/css/2.4c97ca4f.chunk.css.map",
+    "static/css/main.8ccfe011.chunk.css.map": "/App-Eureka/static/css/main.8ccfe011.chunk.css.map",
+    "static/js/2.85f254ca.chunk.js.LICENSE.txt": "/App-Eureka/static/js/2.85f254ca.chunk.js.LICENSE.txt",
+    "static/media/404.43ed5c3f.svg": "/App-Eureka/static/media/404.43ed5c3f.svg",
+    "static/media/collaboration.f3ede0b6.svg": "/App-Eureka/static/media/collaboration.f3ede0b6.svg",
+    "static/media/githubLogo.9362ff74.svg": "/App-Eureka/static/media/githubLogo.9362ff74.svg",
+    "static/media/linkLogo.32c13dbc.svg": "/App-Eureka/static/media/linkLogo.32c13dbc.svg",
+    "static/media/thinking.1d6d7de1.svg": "/App-Eureka/static/media/thinking.1d6d7de1.svg",
+    "static/media/time.3a1a8916.svg": "/App-Eureka/static/media/time.3a1a8916.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.910c1bfe.js",
+    "static/js/runtime-main.6ae41161.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.1f03089f.chunk.js",
-    "static/css/main.0093cd27.chunk.css",
-    "static/js/main.190ded72.chunk.js"
+    "static/js/2.85f254ca.chunk.js",
+    "static/css/main.8ccfe011.chunk.css",
+    "static/js/main.058d5a9e.chunk.js"
   ]
 }
